@@ -5,6 +5,7 @@ class CuentaBancaria:
         self.__saldo = 0.0
 
     def depositar(self, monto):
+        # HOTFIX: se valida que el monto de depósito sea positivo
         if monto <= 0:
             raise ValueError("El monto a depositar debe ser mayor a 0")
         self.__saldo += monto
